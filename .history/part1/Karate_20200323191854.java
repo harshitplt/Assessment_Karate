@@ -63,7 +63,7 @@ public class Karate extends JFrame {
     }
 
 public static void main(final String[] args) {
-    Karate karate = new Karate();
+    final Karate karate = new Karate();
     karate.setVisible(true);
 }
 }

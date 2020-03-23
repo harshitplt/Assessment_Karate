@@ -2,8 +2,8 @@ package part1;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.GridBagConstraints;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -13,21 +13,21 @@ public class Karate extends JFrame {
 
     JPanel ChoicePanel;
     JPanel ChoiceSelectionPanel;
+    private GridBagConstraints constraints;
 
     public Karate() {
         this.setSize(new Dimension(500, 500));
         this.setLayout(new BorderLayout());
-        addChoiceFirstPanel();
+
+        addChoicePanel();
         addChoiceLabel();
         addChoiceSelectionPanel();
         addChoiceFirst();
         addChoiceSecond();
         addChoiceThird();
-        addSelectButton();
-
     }
 
-    private void addChoiceFirstPanel() {
+    private void addChoicePanel() {
         ChoicePanel = new JPanel();
         this.add(ChoicePanel, BorderLayout.NORTH);
     }
@@ -45,6 +45,10 @@ public class Karate extends JFrame {
     private void addChoiceFirst() {
         JRadioButton choicefirst = new JRadioButton("Registration");
         ChoiceSelectionPanel.add(choicefirst);
+
+        constraints.gridx = 0;
+        constraints.gridy = 1;
+        constraints.gridwidth = 2;
     }
 
     private void addChoiceSecond() {
@@ -56,14 +60,9 @@ public class Karate extends JFrame {
         JRadioButton choicethird = new JRadioButton("StudentList");
         ChoiceSelectionPanel.add(choicethird);
     }
-    
-    private void addSelectButton() {
-        JButton selectbutton = new JButton("Ok.");
-        ChoiceSelectionPanel.add(selectbutton);
-    }
 
 public static void main(final String[] args) {
-    Karate karate = new Karate();
+    final Karate karate = new Karate();
     karate.setVisible(true);
 }
 }

@@ -17,17 +17,17 @@ public class Karate extends JFrame {
     public Karate() {
         this.setSize(new Dimension(500, 500));
         this.setLayout(new BorderLayout());
-        addChoiceFirstPanel();
+
+        addChoicePanel();
         addChoiceLabel();
         addChoiceSelectionPanel();
         addChoiceFirst();
         addChoiceSecond();
         addChoiceThird();
         addSelectButton();
-
     }
 
-    private void addChoiceFirstPanel() {
+    private void addChoicePanel() {
         ChoicePanel = new JPanel();
         this.add(ChoicePanel, BorderLayout.NORTH);
     }
@@ -56,14 +56,14 @@ public class Karate extends JFrame {
         JRadioButton choicethird = new JRadioButton("StudentList");
         ChoiceSelectionPanel.add(choicethird);
     }
-    
+
     private void addSelectButton() {
         JButton selectbutton = new JButton("Ok.");
         ChoiceSelectionPanel.add(selectbutton);
     }
 
 public static void main(final String[] args) {
-    Karate karate = new Karate();
+    final Karate karate = new Karate();
     karate.setVisible(true);
 }
 }

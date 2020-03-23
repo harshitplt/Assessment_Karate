@@ -39,7 +39,7 @@ public class Karate extends JFrame {
 
     private void addChoiceSelectionPanel() {
         ChoiceSelectionPanel = new JPanel();
-        this.add(ChoiceSelectionPanel, BorderLayout.CENTER);
+        this.add(ChoiceSelectionPanel, BorderLayout.WINDOWSCENTER);
     }
 
     private void addChoiceFirst() {
@@ -63,7 +63,7 @@ public class Karate extends JFrame {
     }
 
 public static void main(final String[] args) {
-    Karate karate = new Karate();
+    final Karate karate = new Karate();
     karate.setVisible(true);
 }
 }

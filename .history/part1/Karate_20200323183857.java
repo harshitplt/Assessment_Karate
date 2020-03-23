@@ -3,7 +3,6 @@ package part1;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -17,23 +16,22 @@ public class Karate extends JFrame {
     public Karate() {
         this.setSize(new Dimension(500, 500));
         this.setLayout(new BorderLayout());
-        addChoiceFirstPanel();
+
+        addChoicePanel();
         addChoiceLabel();
         addChoiceSelectionPanel();
         addChoiceFirst();
-        addChoiceSecond();
-        addChoiceThird();
-        addSelectButton();
 
     }
 
-    private void addChoiceFirstPanel() {
-        ChoicePanel = new JPanel();
+    
+    private void addChoicePanel() {
+        ChoicePanel = new JPanel("Tourment Controller");
         this.add(ChoicePanel, BorderLayout.NORTH);
     }
     
     private void addChoiceLabel() {
-        JLabel choicelabel = new JLabel("KARATE");
+        final JLabel choicelabel = new JLabel("KARATE");
         ChoicePanel.add(choicelabel);
     }
 
@@ -43,27 +41,13 @@ public class Karate extends JFrame {
     }
 
     private void addChoiceFirst() {
-        JRadioButton choicefirst = new JRadioButton("Registration");
+        final JRadioButton choicefirst = new JRadioButton("Registration");
         ChoiceSelectionPanel.add(choicefirst);
     }
 
-    private void addChoiceSecond() {
-        JRadioButton choicesecond = new JRadioButton("Organize");
-        ChoiceSelectionPanel.add(choicesecond);
-    }
-
-    private void addChoiceThird() {
-        JRadioButton choicethird = new JRadioButton("StudentList");
-        ChoiceSelectionPanel.add(choicethird);
-    }
-    
-    private void addSelectButton() {
-        JButton selectbutton = new JButton("Ok.");
-        ChoiceSelectionPanel.add(selectbutton);
-    }
 
 public static void main(final String[] args) {
-    Karate karate = new Karate();
+    final Karate karate = new Karate();
     karate.setVisible(true);
 }
 }

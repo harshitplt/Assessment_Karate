@@ -17,6 +17,7 @@ public class Karate extends JFrame {
     public Karate() {
         this.setSize(new Dimension(500, 500));
         this.setLayout(new BorderLayout());
+s
         addChoiceFirstPanel();
         addChoiceLabel();
         addChoiceSelectionPanel();
@@ -63,7 +64,7 @@ public class Karate extends JFrame {
     }
 
 public static void main(final String[] args) {
-    Karate karate = new Karate();
+    final Karate karate = new Karate();
     karate.setVisible(true);
 }
 }

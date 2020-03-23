@@ -12,11 +12,13 @@ import javax.swing.JRadioButton;
 public class Karate extends JFrame {
 
     JPanel ChoicePanel;
+    JPanel controlPanel;
     JPanel ChoiceSelectionPanel;
 
     public Karate() {
         this.setSize(new Dimension(500, 500));
         this.setLayout(new BorderLayout());
+
         addChoiceFirstPanel();
         addChoiceLabel();
         addChoiceSelectionPanel();
@@ -24,7 +26,7 @@ public class Karate extends JFrame {
         addChoiceSecond();
         addChoiceThird();
         addSelectButton();
-
+        addChoiceSecondPanel();
     }
 
     private void addChoiceFirstPanel() {
@@ -56,14 +58,19 @@ public class Karate extends JFrame {
         JRadioButton choicethird = new JRadioButton("StudentList");
         ChoiceSelectionPanel.add(choicethird);
     }
-    
+
+    private void addChoiceSecondPanel() {
+        controlPanel = new JPanel();
+        controlPanel.add(controlPanel, BorderLayout.SOUTH);
+    }
+
     private void addSelectButton() {
         JButton selectbutton = new JButton("Ok.");
-        ChoiceSelectionPanel.add(selectbutton);
+        controlPanel.add(selectbutton);
     }
 
 public static void main(final String[] args) {
-    Karate karate = new Karate();
+    final Karate karate = new Karate();
     karate.setVisible(true);
 }
 }
