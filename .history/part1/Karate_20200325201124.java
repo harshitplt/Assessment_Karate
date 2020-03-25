@@ -12,6 +12,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
+import part2.Registration;
+
 public class Karate extends JFrame {
 
     JPanel ChoicePanel;
@@ -74,8 +76,11 @@ public class Karate extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 // TODO Auto-generated method stub
 
-                part2.RegisterFormPage re = new part2.RegisterFormPage();
-                re.setVisible(true);
+                Registration reframe = new Registration();
+                reframe.setVisible(true);
+
+                Karate againframe = new Karate();
+                againframe.setVisible(true);
             }
         });
     }

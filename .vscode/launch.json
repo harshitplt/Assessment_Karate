@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - RegisterFormPage",
+            "request": "launch",
+            "mainClass": "part2.RegisterFormPage",
+            "projectName": "Assessment_Karate_52ee7bd1"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Registration",
             "request": "launch",
             "mainClass": "part2.Registration",

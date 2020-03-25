@@ -19,7 +19,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JScrollBar;
 import javax.swing.JTextField;
 
-public class Registration extends JFrame {
+public class Register extends JFrame {
 
     public static void main(String[] args) {
 
@@ -147,13 +147,13 @@ public class Registration extends JFrame {
 
         panel.add(button1, cont);
         cont.gridx = 0;
-        cont.gridy = 1;
+        cont.gridy = 11;
         panel.add(button2, cont);
         cont.gridx = 0;
-        cont.gridy = 1;
+        cont.gridy = 12;
         panel.add(button3, cont);
         cont.gridx = 0;
-        cont.gridy = 1;
+        cont.gridy = 13;
 
         mainPanel.add(headingPanel);
         mainPanel.add(panel);

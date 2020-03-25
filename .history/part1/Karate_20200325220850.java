@@ -12,6 +12,10 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
+import jdk.vm.ci.code.Register;
+import part2.RegisterForm;
+import part2.Registration;
+
 public class Karate extends JFrame {
 
     JPanel ChoicePanel;

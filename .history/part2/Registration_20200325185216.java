@@ -1,0 +1,171 @@
+package part2;
+
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JScrollBar;
+import javax.swing.JTextField;
+
+public class Registration extends JFrame {
+
+    public static void main(String[] args) {
+
+        JFrame form = new JFrame();
+        form.setTitle("Registration Form");
+
+        JPanel mainPanel = new JPanel();
+        mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
+
+        JPanel headingPanel = new JPanel();
+        JLabel headingLabel = new JLabel("Students Registration");
+        headingPanel.add(headingLabel);
+
+        JPanel panel = new JPanel(new GridBagLayout());
+        GridBagConstraints cont = new GridBagConstraints();
+
+        cont.insets = new Insets(10, 10, 10, 10);
+        cont.anchor = GridBagConstraints.WEST;
+
+        cont.gridx = 0;
+        cont.gridy = 0;
+
+        JLabel Name = new JLabel("*Name:");
+        JLabel Gender = new JLabel("*Gender:");
+        JLabel BoD = new JLabel("*BoD:");
+        JLabel age = new JLabel("*Age:");
+        JLabel Address = new JLabel("Address:");
+        JLabel Ph_no = new JLabel("Phone No:");
+        JLabel belt = new JLabel("*Belt:");
+        JLabel event = new JLabel("*Event:");
+
+        JTextField nmfield = new JTextField(32);
+        JRadioButton rbutton1 = new JRadioButton("Boy");
+        JRadioButton rbutton2 = new JRadioButton("Girl");
+
+        JXDatePicker picker = new JXDatePicker();
+        picker.setDate(Calendar.getInstance().getTime());
+        picker.setFormats(new SimpleDateFormat("dd.MM.yyyy"));
+
+        JScrollBar agescroller = new JScrollBar(picker.calculatedage);
+        JTextField address = new JTextField(32);
+        JTextField phoneno = new JTextField(13);
+
+        String[] beltselector = { "White", "Yellow", "Orange", "Blue", "Purple", "Green", "Brown", "Black" };
+
+        JComboBox selectbelt = new JComboBox(beltselector);
+        JCheckBox eventchecker1 = new JCheckBox("Kata");
+        JCheckBox eventchecker2 = new JCheckBox("Kumite");
+
+        panel.add(Name, cont);
+        cont.gridx = 1;
+        panel.add(nmfield, cont);
+        cont.gridx = 0;
+        cont.gridy = 1;
+
+        panel.add(Gender, cont);
+        cont.gridx = 1;
+        panel.add(rbutton1, cont);
+        cont.gridx = 0;
+        cont.gridy = 2;
+
+        cont.gridx = 1;
+        panel.add(rbutton2, cont);
+        cont.gridx = 0;
+        cont.gridy = 3;
+
+        panel.add(BoD, cont);
+        cont.gridx = 1;
+        cont.gridx = 0;
+        cont.gridy = 4;
+
+        panel.add(age, cont);
+        cont.gridx = 1;
+        panel.add(agescroller, cont);
+        cont.gridx = 0;
+        cont.gridy = 5;
+
+        panel.add(Address, cont);
+        cont.gridx = 1;
+        panel.add(address, cont);
+        cont.gridx = 0;
+        cont.gridy = 6;
+
+        panel.add(Ph_no, cont);
+        cont.gridx = 1;
+        panel.add(phoneno, cont);
+        cont.gridx = 0;
+        cont.gridy = 7;
+
+        panel.add(belt, cont);
+        cont.gridx = 1;
+        panel.add(selectbelt, cont);
+        cont.gridx = 0;
+        cont.gridy = 8;
+
+        panel.add(event, cont);
+        cont.gridx = 1;
+        panel.add(eventchecker1, cont);
+        cont.gridx = 0;
+        cont.gridy = 9;
+
+        cont.gridx = 1;
+        panel.add(eventchecker2, cont);
+        cont.gridx = 0;
+        cont.gridy = 10;
+
+        JButton button1 = new JButton("Submit");
+        JButton button2 = new JButton("Reset");
+        JButton button3 = new JButton("Home");
+
+        button1.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // TODO Auto-generated method stub
+                headingLabel.setText("Validated");
+                Name.setText("");
+                rbutton1.setSelected(true);
+                rbutton2.setSelected(true);
+                selectbelt.setSelectedItem(true);
+                eventchecker1.setSelected(true);
+                eventchecker2.setSelected(true);
+            }
+        });
+
+        panel.add(button1, cont);
+        cont.gridx = 0;
+        cont.gridy = 11;
+        panel.add(button2, cont);
+        cont.gridx = 0;
+        cont.gridy = 12;
+        panel.add(button3, cont);
+        cont.gridx = 0;
+        cont.gridy = 13;
+
+        mainPanel.add(headingPanel);
+        mainPanel.add(panel);
+
+        form.add(mainPanel);
+        form.pack();
+        form.setSize(400, 400);
+        form.setLocationRelativeTo(null);
+        form.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        form.setVisible(true);
+
+    }
+
+}
