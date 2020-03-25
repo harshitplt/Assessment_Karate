@@ -37,7 +37,7 @@ public class Registration extends JFrame {
         JPanel panel = new JPanel(new GridBagLayout());
         GridBagConstraints cont = new GridBagConstraints();
 
-        cont.insets = new Insets(10, 10, 10, 10);
+        cont.insets = new Insets(15, 15, 15, 15);
         cont.anchor = GridBagConstraints.WEST;
 
         cont.gridx = 0;
@@ -148,13 +148,13 @@ public class Registration extends JFrame {
 
         panel.add(button1, cont);
         cont.gridx = 0;
-        cont.gridy = 1;
+        cont.gridy = 11;
         panel.add(button2, cont);
         cont.gridx = 0;
-        cont.gridy = 1;
+        cont.gridy = 12;
         panel.add(button3, cont);
         cont.gridx = 0;
-        cont.gridy = 1;
+        cont.gridy = 13;
 
         mainPanel.add(headingPanel);
         mainPanel.add(panel);
