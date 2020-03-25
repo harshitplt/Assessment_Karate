@@ -64,7 +64,7 @@ public class Karate extends JFrame {
         ChoiceSelectionPanel.add(selectbutton);
     }
 
-public static void main(String[] args) {
+public static void main(final String[] args) {
     Karate karate = new Karate();
     karate.setVisible(true);
 }

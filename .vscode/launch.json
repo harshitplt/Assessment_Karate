@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "CodeLens (Launch) - Registration",
+            "request": "launch",
+            "mainClass": "part2.Registration",
+            "projectName": "Assessment_Karate_52ee7bd1"
+        },
+        {
             "name": ".NET Core Attach",
             "type": "coreclr",
             "request": "attach",
@@ -141,7 +148,6 @@
                 "debuggerPath": "enter the path for the debugger on the target machine, for example ~/vsdbg/vsdbg"
             }
         },
-
         {
             "type": "graalvm",
             "request": "launch",
