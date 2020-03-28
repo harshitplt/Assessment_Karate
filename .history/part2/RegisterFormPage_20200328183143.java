@@ -19,13 +19,11 @@ import javax.swing.JRadioButton;
 import javax.swing.JScrollBar;
 import javax.swing.JTextField;
 
-import part1.Karate;
-
-public class RegisterFormPage extends Karate {
+public class RegisterFormPage extends JFrame {
 
     public static void main(String[] args) {
 
-        Karate form = new Karate();
+        JFrame form = new JFrame();
         form.setTitle("Registration Form");
 
         JPanel mainPanel = new JPanel();

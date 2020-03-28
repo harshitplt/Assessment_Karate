@@ -5,15 +5,14 @@ import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.Action;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
-import part2.RegisterFormPage;
-
-public class Karate extends JFrame implements ActionListener {
+public class Karate extends JFrame {
 
     JPanel ChoicePanel;
     JPanel ChoiceSelectionPanel;
@@ -66,16 +65,20 @@ public class Karate extends JFrame implements ActionListener {
     private void addSelectButton() {
         JButton selectbutton = new JButton("Ok.");
         ChoiceSelectionPanel.add(selectbutton);
-        selectbutton.addActionListener(this);
-        }
+        selectbutton.addActionListener((ActionListener) new ActionListener() {
+            public void actionPerformed(Action e) {
 
-    @Override
-public void actionPerformed(ActionEvent ae) {
-    // TODO Auto-generated method stub
-    
-    RegisterFormPage re = new RegisterFormPage();
-    re.setVisible(true);
-};
+            }
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // TODO Auto-generated method stub
+
+                part2.RegisterFormPage re = new part2.RegisterFormPage();
+                re.setVisible(true);
+            }
+        });
+    }
 
 public static void main(String[] args) {
     Karate karate = new Karate();
