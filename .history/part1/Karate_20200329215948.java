@@ -18,8 +18,6 @@ import part4.Organising;
 
 public class Karate extends JFrame implements ActionListener {
 
-    private static final long serialVersionUID = 1L;
-
     JPanel ChoicePanel;
     JPanel ChoiceSelectionPanel;
     ButtonGroup grp = new ButtonGroup();
@@ -58,51 +56,40 @@ public class Karate extends JFrame implements ActionListener {
         JRadioButton choicefirst = new JRadioButton("Registration");
         ChoiceSelectionPanel.add(choicefirst);
         grp.add(choicefirst);
-        choicefirst.setActionCommand("bt1");
     }
 
     private void addChoiceSecond() {
         JRadioButton choicesecond = new JRadioButton("Organize");
         ChoiceSelectionPanel.add(choicesecond);
         grp.add(choicesecond);
-        choicesecond.setActionCommand("bt2");
     }
 
     private void addChoiceThird() {
         JRadioButton choicethird = new JRadioButton("StudentList");
         ChoiceSelectionPanel.add(choicethird);
         grp.add(choicethird);
-        choicethird.setActionCommand("bt3");
-
     }
 
     private void addSelectButton() {
         JButton selectbutton = new JButton("Ok.");
         ChoiceSelectionPanel.add(selectbutton);
         selectbutton.addActionListener(this);
-        selectbutton.setActionCommand("okbtm");
     }    
 
     @Override
 public void actionPerformed(ActionEvent e) {
     // TODO Auto-generated method stub
 
-    if (e.getActionCommand().equals("bt1")){
-        if (e.getActionCommand().equals("okbtm")){
-            RegisterFormPage re = new RegisterFormPage();
-        }
+    if (e.getActionCommand().equals("Registration")){
+        RegisterFormPage re = new RegisterFormPage();
     }
 
-    else if (e.getActionCommand().equals("bt2")){
-        if (e.getActionCommand().equals("okbtm")){
-            StudentsList pl = new StudentsList();
-        }
+    else if (e.getActionCommand().equals("StudentList")){
+        StudentsList pl = new StudentsList();
     }
-            
-    else if (e.getActionCommand().equals("bt3")){
-        if (e.getActionCommand().equals("okbtm")){
-            Organising or = new Organising();
-        }
+
+    else if (e.getActionCommand().equals("Organize")){
+        Organising or = new Organising();
     }
 
 };

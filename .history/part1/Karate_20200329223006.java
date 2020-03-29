@@ -18,8 +18,6 @@ import part4.Organising;
 
 public class Karate extends JFrame implements ActionListener {
 
-    private static final long serialVersionUID = 1L;
-
     JPanel ChoicePanel;
     JPanel ChoiceSelectionPanel;
     ButtonGroup grp = new ButtonGroup();

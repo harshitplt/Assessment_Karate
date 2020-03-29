@@ -18,8 +18,6 @@ import part4.Organising;
 
 public class Karate extends JFrame implements ActionListener {
 
-    private static final long serialVersionUID = 1L;
-
     JPanel ChoicePanel;
     JPanel ChoiceSelectionPanel;
     ButtonGroup grp = new ButtonGroup();
@@ -87,22 +85,16 @@ public class Karate extends JFrame implements ActionListener {
 public void actionPerformed(ActionEvent e) {
     // TODO Auto-generated method stub
 
-    if (e.getActionCommand().equals("bt1")){
-        if (e.getActionCommand().equals("okbtm")){
-            RegisterFormPage re = new RegisterFormPage();
-        }
+    if (e.getActionCommand().equals("bt1") && e.getActionCommand().equals("okbtm")){
+        RegisterFormPage re = new RegisterFormPage();
     }
 
-    else if (e.getActionCommand().equals("bt2")){
-        if (e.getActionCommand().equals("okbtm")){
-            StudentsList pl = new StudentsList();
-        }
+    else if (e.getActionCommand().equals("bt2") && e.getActionCommand().equals("okbtm")){
+        StudentsList pl = new StudentsList();
     }
-            
-    else if (e.getActionCommand().equals("bt3")){
-        if (e.getActionCommand().equals("okbtm")){
-            Organising or = new Organising();
-        }
+
+    else if (e.getActionCommand().equals("bt3") && e.getActionCommand().equals("okbtm")){
+        Organising or = new Organising();
     }
 
 };
