@@ -73,7 +73,6 @@ public class Karate extends JFrame implements ActionListener {
 public void actionPerformed(ActionEvent e) {
     // TODO Auto-generated method stub
     
-    this.dispose();
     RegisterFormPage re = new RegisterFormPage();
 };
 

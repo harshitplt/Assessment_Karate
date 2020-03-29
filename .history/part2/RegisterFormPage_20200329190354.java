@@ -21,11 +21,12 @@ import javax.swing.JTextField;
 
 import part1.Karate;
 
-public class RegisterFormPage{
+public class RegisterFormPage extends Karate {
 
-        JFrame karate = new JFrame("Registeration Form");
+    public static void main(String[] args) {
 
-        public RegisterFormPage(){
+        RegisterFormPage form = new RegisterFormPage();
+        form.setTitle("Registration Form");
 
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
@@ -159,12 +160,11 @@ public class RegisterFormPage{
         mainPanel.add(headingPanel);
         mainPanel.add(panel);
 
-        karate.add(mainPanel);
-        karate.pack();
-        karate.setSize(400, 400);
-        karate.setVisible(true);
-        karate.setLocationRelativeTo(null);
-        karate.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        form.add(mainPanel);
+        form.pack();
+        form.setSize(400, 400);
+        form.setLocationRelativeTo(null);
+        form.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     }
 

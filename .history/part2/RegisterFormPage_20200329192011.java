@@ -162,7 +162,6 @@ public class RegisterFormPage{
         karate.add(mainPanel);
         karate.pack();
         karate.setSize(400, 400);
-        karate.setVisible(true);
         karate.setLocationRelativeTo(null);
         karate.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

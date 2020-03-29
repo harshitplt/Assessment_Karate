@@ -25,7 +25,7 @@ public class RegisterFormPage{
 
         JFrame karate = new JFrame("Registeration Form");
 
-        public RegisterFormPage(){
+        RegisterFormPage(){
 
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
@@ -162,7 +162,6 @@ public class RegisterFormPage{
         karate.add(mainPanel);
         karate.pack();
         karate.setSize(400, 400);
-        karate.setVisible(true);
         karate.setLocationRelativeTo(null);
         karate.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

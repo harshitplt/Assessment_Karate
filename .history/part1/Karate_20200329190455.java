@@ -66,15 +66,14 @@ public class Karate extends JFrame implements ActionListener {
     private void addSelectButton() {
         JButton selectbutton = new JButton("Ok.");
         ChoiceSelectionPanel.add(selectbutton);
-        selectbutton.addActionListener(this);
         }
 
     @Override
-public void actionPerformed(ActionEvent e) {
+public void actionPerformed(ActionEvent ae) {
     // TODO Auto-generated method stub
     
-    this.dispose();
     RegisterFormPage re = new RegisterFormPage();
+    re.setVisible(true);
 };
 
 public static void main(String[] args) {
