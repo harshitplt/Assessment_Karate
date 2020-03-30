@@ -88,27 +88,27 @@ public void actionPerformed(ActionEvent e) {
     this.dispose();
     //RegisterFormPage re = new RegisterFormPage();
 
-    String btnVal = grp.getSelection().getActionCommand().toString();
+    Object val = grp.getSelection();
 
     System.out.println(e.getActionCommand());
 
-    if (btnVal.equalsIgnoreCase("bt1")){
+    if (e.getActionCommand().equalsIgnoreCase("bt1")){
         if (e.getActionCommand().equals("okbtm")){
             RegisterFormPage rre = new RegisterFormPage();
         }
     }
 
-    else if (btnVal.equalsIgnoreCase("bt2")){
-        if (e.getActionCommand().equals("okbtm")){
-            StudentsList pl = new StudentsList();
-        }
-    }
+//    else if (e.getActionCommand().equals("bt2")){
+//        if (e.getActionCommand().equals("okbtm")){
+//            StudentsList pl = new StudentsList();
+//        }
+//    }
             
-    else if (btnVal.equalsIgnoreCase("bt3")){
-        if (e.getActionCommand().equals("okbtm")){
-            Organising or = new Organising();
-        }
-    }
+//    else if (e.getActionCommand().equals("bt3")){
+//        if (e.getActionCommand().equals("okbtm")){
+//            Organising or = new Organising();
+//        }
+//    }
 
 };
 
