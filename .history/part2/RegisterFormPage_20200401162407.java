@@ -39,7 +39,7 @@ public class     RegisterFormPage implements ActionListener {
         JPanel panel = new JPanel(new GridBagLayout());
         GridBagConstraints cont = new GridBagConstraints();
 
-        cont.insets = new Insets(12, 12, 12, 50);
+        cont.insets = new Insets(8, 8, 8, 8);
         cont.anchor = GridBagConstraints.WEST;
 
         cont.gridx = 0;
@@ -77,7 +77,6 @@ public class     RegisterFormPage implements ActionListener {
         panel.add(nmfield, cont);
         cont.gridx = 0;
         cont.gridy = 1;
-        cont.gridwidth = 2;
 
         panel.add(Gender, cont);
         cont.gridx = 1;
@@ -91,9 +90,9 @@ public class     RegisterFormPage implements ActionListener {
         cont.gridy = 3;
 
         panel.add(BoD, cont);
-        //cont.gridx = 1;
-        cont.gridx = 0;
-        cont.gridy = 4;
+        cont.gridx = 1;
+        //cont.gridx = 0;
+        //cont.gridy = 4;
 
         panel.add(age, cont);
         cont.gridx = 1;
@@ -106,8 +105,7 @@ public class     RegisterFormPage implements ActionListener {
         panel.add(address, cont);
         cont.gridx = 0;
         cont.gridy = 6;
-        cont.gridwidth = 2;
-        
+
         panel.add(Ph_no, cont);
         cont.gridx = 1;
         panel.add(phoneno, cont);
@@ -138,12 +136,11 @@ public class     RegisterFormPage implements ActionListener {
         JButton btn3 = new JButton("Home");
         btn3.addActionListener(this);
 
-        cont.insets = new Insets(20, 20, 20, 20);
         panel.add(btn1, cont);
         cont.gridx = 0;
         //cont.gridy = 11;
         panel.add(btn2, cont);
-        cont.gridx = 2;
+        cont.gridx = 1;
         //cont.gridy = 11;
         panel.add(btn3, cont);
         cont.gridx = 2;

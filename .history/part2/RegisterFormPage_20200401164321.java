@@ -138,12 +138,11 @@ public class     RegisterFormPage implements ActionListener {
         JButton btn3 = new JButton("Home");
         btn3.addActionListener(this);
 
-        cont.insets = new Insets(20, 20, 20, 20);
         panel.add(btn1, cont);
         cont.gridx = 0;
         //cont.gridy = 11;
         panel.add(btn2, cont);
-        cont.gridx = 2;
+        cont.gridx = 1;
         //cont.gridy = 11;
         panel.add(btn3, cont);
         cont.gridx = 2;

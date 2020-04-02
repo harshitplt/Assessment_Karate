@@ -7,9 +7,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-
 import part1.Karate;
 
 public class Organising {
@@ -23,28 +20,15 @@ public class Organising {
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
 
-        JPanel headingJPanel1 = new JPanel();
-        JLabel headingLabel1 = new JLabel("Organise");
-        headingJPanel1.add(headingLabel1);
-
-        JPanel panel = new JPanel(new GridBagLayout());
-        GridBagConstraints cont = new GridBagConstraints();
+        JPanel headingJPanel = new JPanel();
+        JLabel headingLabel = new JLabel("Organise");
+        headingJPanel.add(headingLabel);
 
         JLabel bowls = new JLabel("Enter Number of Bowls:");
         JTextField enterbowl = new JTextField(8);
 
         JButton nxtbtn = new JButton();
         JButton hmebtn = new JButton();
-
-        mainPanel.add(headingJPanel1);
-        mainPanel.add(panel);
-
-        Karate.add(mainPanel);
-        Karate.pack();
-        Karate.setSize(400, 400);
-        Karate.setVisible(true);
-        Karate.setLocationRelativeTo(null);
-        Karate.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     }
 

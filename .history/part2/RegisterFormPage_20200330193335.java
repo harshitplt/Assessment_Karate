@@ -21,7 +21,7 @@ import javax.swing.JTextField;
 
 import part1.Karate;
 
-public class     RegisterFormPage implements ActionListener {
+public class RegisterFormPage{
 
     private static final long serialVersionUID = 2L;
 
@@ -39,7 +39,7 @@ public class     RegisterFormPage implements ActionListener {
         JPanel panel = new JPanel(new GridBagLayout());
         GridBagConstraints cont = new GridBagConstraints();
 
-        cont.insets = new Insets(12, 12, 12, 50);
+        cont.insets = new Insets(10, 10, 10, 10);
         cont.anchor = GridBagConstraints.WEST;
 
         cont.gridx = 0;
@@ -77,7 +77,6 @@ public class     RegisterFormPage implements ActionListener {
         panel.add(nmfield, cont);
         cont.gridx = 0;
         cont.gridy = 1;
-        cont.gridwidth = 2;
 
         panel.add(Gender, cont);
         cont.gridx = 1;
@@ -91,7 +90,7 @@ public class     RegisterFormPage implements ActionListener {
         cont.gridy = 3;
 
         panel.add(BoD, cont);
-        //cont.gridx = 1;
+        cont.gridx = 1;
         cont.gridx = 0;
         cont.gridy = 4;
 
@@ -106,8 +105,7 @@ public class     RegisterFormPage implements ActionListener {
         panel.add(address, cont);
         cont.gridx = 0;
         cont.gridy = 6;
-        cont.gridwidth = 2;
-        
+
         panel.add(Ph_no, cont);
         cont.gridx = 1;
         panel.add(phoneno, cont);
@@ -131,23 +129,34 @@ public class     RegisterFormPage implements ActionListener {
         cont.gridx = 0;
         cont.gridy = 10;
 
-        JButton btn1 = new JButton("Submit");
-        btn1.addActionListener(this);
-        JButton btn2 = new JButton("Reset");
-        btn2.addActionListener(this);
-        JButton btn3 = new JButton("Home");
-        btn3.addActionListener(this);
+        JButton button1 = new JButton("Submit");
+        JButton button2 = new JButton("Reset");
+        JButton button3 = new JButton("Home");
 
-        cont.insets = new Insets(20, 20, 20, 20);
-        panel.add(btn1, cont);
-        cont.gridx = 0;
-        //cont.gridy = 11;
-        panel.add(btn2, cont);
-        cont.gridx = 2;
-        //cont.gridy = 11;
-        panel.add(btn3, cont);
-        cont.gridx = 2;
-        //cont.gridy = 11;
+        button1.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+               // TODO Auto-generated method stub
+                headingLabel.setText("Validated");
+                Name.setText("");
+                rbutton1.setSelected(true);
+                rbutton2.setSelected(true);
+                selectbelt.setSelectedItem(true);
+                eventchecker1.setSelected(true);
+                eventchecker2.setSelected(true);
+            }
+        });
+
+        panel.add(button1, cont);
+        cont.gridx = 3;
+        cont.gridy = 12;
+        panel.add(button2, cont);
+        cont.gridx = 3;
+        cont.gridy = 12;
+        panel.add(button3, cont);
+        cont.gridx = 3;
+        cont.gridy = 12;
 
         mainPanel.add(headingPanel);
         mainPanel.add(panel);
@@ -158,12 +167,6 @@ public class     RegisterFormPage implements ActionListener {
         karate.setVisible(true);
         karate.setLocationRelativeTo(null);
         karate.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        // TODO Auto-generated method stub
 
     }
 
