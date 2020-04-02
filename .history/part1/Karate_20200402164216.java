@@ -20,8 +20,6 @@ public class Karate extends JFrame implements ActionListener {
 
     private static final long serialVersionUID = 1L;
 
-    JFrame RegisterFormPage = new JFrame("Karate");
-
     JPanel ChoicePanel;
     JPanel ChoiceSelectionPanel;
     ButtonGroup grp = new ButtonGroup();
@@ -92,6 +90,9 @@ public void actionPerformed(ActionEvent e) {
 
     String btnVal = grp.getSelection().getActionCommand().toString();
 
+    System.out.println(e.getActionCommand());
+    System.out.println(btnVal);
+
    if (btnVal.equalsIgnoreCase("bt1")) 
     {
         RegisterFormPage rre = new RegisterFormPage();
@@ -112,6 +113,5 @@ public void actionPerformed(ActionEvent e) {
 public static void main(String[] args) {
     Karate karate = new Karate();
     karate.setVisible(true);
-
 }
 }

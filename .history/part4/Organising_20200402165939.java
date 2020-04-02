@@ -6,7 +6,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.ButtonGroup;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -19,7 +18,6 @@ public class Organising {
     private static final long serialVersionUID = 4L;
     
     JFrame Karate = new JFrame();
-    ButtonGroup grp = new ButtonGroup();
 
     public Organising() {
 

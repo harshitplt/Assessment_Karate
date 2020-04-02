@@ -6,11 +6,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.ButtonGroup;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.Insets;
 
 import part1.Karate;
 
@@ -19,7 +17,6 @@ public class Organising {
     private static final long serialVersionUID = 4L;
     
     JFrame Karate = new JFrame();
-    ButtonGroup grp = new ButtonGroup();
 
     public Organising() {
 
@@ -33,27 +30,11 @@ public class Organising {
         JPanel panel = new JPanel(new GridBagLayout());
         GridBagConstraints cont = new GridBagConstraints();
 
-        cont.insets = new Insets(10, 10, 10, 10);
-        cont.anchor = GridBagConstraints.WEST;
-
         JLabel bowls = new JLabel("Enter Number of Bowls:");
-        JTextField enterbowl = new JTextField(16);
+        JTextField enterbowl = new JTextField(8);
 
         JButton nxtbtn = new JButton();
         JButton hmebtn = new JButton();
-
-        panel.add(bowls, cont);
-        cont.gridx = 1;
-        panel.add(enterbowl, cont);
-        cont.gridy = 0;
-        cont.gridx = 1;
-
-        panel.add(nxtbtn, cont);
-        cont.gridy = 1;
-        //cont.gridx = 1;
-        panel.add(hmebtn, cont);
-        cont.gridy = 1;
-        //cont.gridx = 2;
 
         mainPanel.add(headingJPanel);
         mainPanel.add(panel);

@@ -18,17 +18,14 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JScrollBar;
 import javax.swing.JTextField;
-import javax.swing.ButtonGroup;
 
 import part1.Karate;
-import part3.StudentsList;
 
 public class RegisterFormPage implements ActionListener {
 
     private static final long serialVersionUID = 2L;
 
         JFrame karate = new JFrame("Registeration Form");
-        ButtonGroup grp = new ButtonGroup();
 
         public RegisterFormPage(){
 
@@ -136,16 +133,10 @@ public class RegisterFormPage implements ActionListener {
 
         JButton btn1 = new JButton("Submit");
         btn1.addActionListener(this);
-        grp.add(btn1);
-        btn1.setActionCommand("Sub");
         JButton btn2 = new JButton("Reset");
         btn2.addActionListener(this);
-        grp.add(btn2);
-        btn2.setActionCommand("Rst");
         JButton btn3 = new JButton("Home");
         btn3.addActionListener(this);
-        grp.add(btn3);
-        btn3.setActionCommand("Hme");
 
         cont.insets = new Insets(20, 20, 20, 20);
         panel.add(btn1, cont);
@@ -173,24 +164,6 @@ public class RegisterFormPage implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         // TODO Auto-generated method stub
-
-        String btnVal = grp.getSelection().getActionCommand().toString();
-
-        if (btnVal.equalsIgnoreCase("Sub"))
-        {
-            StudentsList sl = new StudentsList();
-        }
-
-        else if (btnVal.equalsIgnoreCase("Rst"))
-        {
-            RegisterFormPage rr = new RegisterFormPage();
-        }
-
-        else if (btnVal.equalsIgnoreCase("Hme"))
-        {
-            Karate kfp = new Karate();
-        }
-
 
     }
 
