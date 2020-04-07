@@ -1,14 +1,12 @@
 package part2;
 
-import java.awt.ComponentOrientation;
-import java.awt.Container;
-import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -21,18 +19,14 @@ import javax.swing.JRadioButton;
 import javax.swing.JScrollBar;
 import javax.swing.JTextField;
 
+import JXDatePicker;
 
 import javax.swing.ButtonGroup;
-
-import javax.swing.JFormattedTextField;
-import java.text.DateFormat;
-import java.util.Date;
-
 
 import part1.Karate;
 import part3.StudentsList;
 
-public class RegisterFormPage extends JFrame implements ActionListener {
+public class RegisterFormPage implements ActionListener {
 
     private static final long serialVersionUID = 2L;
 
@@ -70,15 +64,9 @@ public class RegisterFormPage extends JFrame implements ActionListener {
         JRadioButton rbutton1 = new JRadioButton("Boy");
         JRadioButton rbutton2 = new JRadioButton("Girl");
 
-        JFormattedTextField textField = new JFormattedTextField(DateFormat.getDateInstance(DateFormat.SHORT));
-        textField.setValue(new Date());
-        textField.setPreferredSize(new Dimension(130, 30));
+        JXDatePicker picker = new JXDatePicker();
 
-        Container container = getContentPane();
-        container.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
-
-                
-        JScrollBar agescroller = new JScrollBar();
+        JScrollBar agescroller = new JScrollBar(picker.calculatedage);
         JTextField address = new JTextField(32);
         JTextField phoneno = new JTextField(13);
 
@@ -107,12 +95,9 @@ public class RegisterFormPage extends JFrame implements ActionListener {
         cont.gridy = 3;
 
         panel.add(BoD, cont);
-        cont.gridx = 1;
-        panel.add(textField, cont);
+        //cont.gridx = 1;
         cont.gridx = 0;
         cont.gridy = 4;
-
-
 
         panel.add(age, cont);
         cont.gridx = 1;

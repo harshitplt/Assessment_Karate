@@ -1,14 +1,14 @@
 package part2;
 
 import java.awt.ComponentOrientation;
-import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -32,7 +32,7 @@ import java.util.Date;
 import part1.Karate;
 import part3.StudentsList;
 
-public class RegisterFormPage extends JFrame implements ActionListener {
+public class RegisterFormPage implements ActionListener {
 
     private static final long serialVersionUID = 2L;
 
@@ -74,11 +74,10 @@ public class RegisterFormPage extends JFrame implements ActionListener {
         textField.setValue(new Date());
         textField.setPreferredSize(new Dimension(130, 30));
 
-        Container container = getContentPane();
-        container.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
+        JDatepcker picker = new JDatepcker();
 
                 
-        JScrollBar agescroller = new JScrollBar();
+        JScrollBar agescroller = new JScrollBar(picker.calculatedage);
         JTextField address = new JTextField(32);
         JTextField phoneno = new JTextField(13);
 
@@ -111,8 +110,6 @@ public class RegisterFormPage extends JFrame implements ActionListener {
         panel.add(textField, cont);
         cont.gridx = 0;
         cont.gridy = 4;
-
-
 
         panel.add(age, cont);
         cont.gridx = 1;

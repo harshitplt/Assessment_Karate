@@ -74,11 +74,13 @@ public class RegisterFormPage extends JFrame implements ActionListener {
         textField.setValue(new Date());
         textField.setPreferredSize(new Dimension(130, 30));
 
+        JDatepcker picker = new JDatepcker();
+
         Container container = getContentPane();
         container.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 
                 
-        JScrollBar agescroller = new JScrollBar();
+        JScrollBar agescroller = new JScrollBar(picker.calculatedage);
         JTextField address = new JTextField(32);
         JTextField phoneno = new JTextField(13);
 

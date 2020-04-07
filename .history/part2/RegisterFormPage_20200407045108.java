@@ -8,7 +8,8 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -74,11 +75,13 @@ public class RegisterFormPage extends JFrame implements ActionListener {
         textField.setValue(new Date());
         textField.setPreferredSize(new Dimension(130, 30));
 
+        JDatepcker picker = new JDatepcker();
+
         Container container = getContentPane();
         container.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 
                 
-        JScrollBar agescroller = new JScrollBar();
+        JScrollBar agescroller = new JScrollBar(picker.calculatedage);
         JTextField address = new JTextField(32);
         JTextField phoneno = new JTextField(13);
 
@@ -101,10 +104,11 @@ public class RegisterFormPage extends JFrame implements ActionListener {
         cont.gridx = 0;
         cont.gridy = 2;
 
-        cont.gridx = 1;
+        /*cont.gridx = 1;
         panel.add(rbutton2, cont);
         cont.gridx = 0;
         cont.gridy = 3;
+        */
 
         panel.add(BoD, cont);
         cont.gridx = 1;

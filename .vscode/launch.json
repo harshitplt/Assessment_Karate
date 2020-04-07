@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - JDatepcker",
+            "request": "launch",
+            "mainClass": "part2.JDatepcker",
+            "projectName": "Assessment_Karate_d4df1760"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Karate",
             "request": "launch",
             "mainClass": "part1.Karate",
