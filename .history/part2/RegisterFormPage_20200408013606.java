@@ -21,7 +21,6 @@ import javax.swing.JRadioButton;
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
-import javax.swing.plaf.InsetsUIResource;
 
 import java.time.*;
 import java.util.Calendar;
@@ -35,7 +34,7 @@ import java.util.Date;
 
 import part1.Karate;
 import part3.StudentsList;
-import part2.JDatePickerForm;
+import part2.DatePicker;
 
 public class RegisterFormPage extends JFrame implements ActionListener {
 
@@ -54,20 +53,13 @@ public class RegisterFormPage extends JFrame implements ActionListener {
         headingPanel.add(headingLabel);
 
         JPanel panel = new JPanel(new GridBagLayout());
-        GridBagConstraints cont1 = new GridBagConstraints();
-        GridBagConstraints cont2 = new GridBagConstraints();
+        GridBagConstraints cont = new GridBagConstraints();
 
-        cont1.insets = new Insets(12, 12, 12, 50);
-        cont1.anchor = GridBagConstraints.WEST;
+        cont.insets = new Insets(12, 12, 12, 50);
+        cont.anchor = GridBagConstraints.WEST;
 
-        cont2.insets = new InsetsUIResource(6, 6, 6, 6);
-        cont2.anchor = GridBagConstraints.SOUTH;
-
-        cont2.gridx = 15;
-        cont2.gridy = 15;
-
-        cont1.gridx = 0;
-        cont1.gridy = 0;
+        cont.gridx = 0;
+        cont.gridy = 0;
 
         JLabel Name = new JLabel("*Name:");
         JLabel Gender = new JLabel("*Gender:");
@@ -86,7 +78,7 @@ public class RegisterFormPage extends JFrame implements ActionListener {
         textField.setValue(new Date());
         textField.setPreferredSize(new Dimension(130, 30));
         
-        JDatePickerForm datepicker = new JDatePickerForm();
+        DatePicker datepicker = new DatePicker();
         
 
         Container container = getContentPane();
@@ -103,67 +95,67 @@ public class RegisterFormPage extends JFrame implements ActionListener {
         JCheckBox eventchecker1 = new JCheckBox("Kata");
         JCheckBox eventchecker2 = new JCheckBox("Kumite");
 
-        panel.add(Name, cont1);
-        cont1.gridx = 1;
-        panel.add(nmfield, cont1);
-        cont1.gridx = 0;
-        cont1.gridy = 1;
-        cont1.gridwidth = 2;
+        panel.add(Name, cont);
+        cont.gridx = 1;
+        panel.add(nmfield, cont);
+        cont.gridx = 0;
+        cont.gridy = 1;
+        cont.gridwidth = 2;
 
-        panel.add(Gender, cont1);
-        cont1.gridx = 1;
-        panel.add(rbutton1, cont1);
-        cont1.gridx = 0;
-        cont1.gridy = 2;
+        panel.add(Gender, cont);
+        cont.gridx = 1;
+        panel.add(rbutton1, cont);
+        cont.gridx = 0;
+        cont.gridy = 2;
 
-        cont1.gridx = 1;
-        panel.add(rbutton2, cont1);
-        cont1.gridx = 0;
-        cont1.gridy = 3;
+        cont.gridx = 1;
+        panel.add(rbutton2, cont);
+        cont.gridx = 0;
+        cont.gridy = 3;
 
-        panel.add(BoD, cont1);
-        cont1.gridx = 1;
-        panel.add(textField, cont1);
-        cont1.gridx = 0;
-        cont1.gridy = 4;
+        panel.add(BoD, cont);
+        cont.gridx = 1;
+        panel.add(textField, cont);
+        cont.gridx = 0;
+        cont.gridy = 4;
 
 
 
-        panel.add(age, cont1);
-        cont1.gridx = 1;
-        panel.add(agescroller, cont1);
-        cont1.gridx = 0;
-        cont1.gridy = 5;
+        panel.add(age, cont);
+        cont.gridx = 1;
+        panel.add(agescroller, cont);
+        cont.gridx = 0;
+        cont.gridy = 5;
 
-        panel.add(Address, cont1);
-        cont1.gridx = 1;
-        panel.add(address, cont1);
-        cont1.gridx = 0;
-        cont1.gridy = 6;
-        cont1.gridwidth = 2;
+        panel.add(Address, cont);
+        cont.gridx = 1;
+        panel.add(address, cont);
+        cont.gridx = 0;
+        cont.gridy = 6;
+        cont.gridwidth = 2;
         
-        panel.add(Ph_no, cont1);
-        cont1.gridx = 1;
-        panel.add(phoneno, cont1);
-        cont1.gridx = 0;
-        cont1.gridy = 7;
+        panel.add(Ph_no, cont);
+        cont.gridx = 1;
+        panel.add(phoneno, cont);
+        cont.gridx = 0;
+        cont.gridy = 7;
 
-        panel.add(belt, cont1);
-        cont1.gridx = 1;
-        panel.add(selectbelt, cont1);
-        cont1.gridx = 0;
-        cont1.gridy = 8;
+        panel.add(belt, cont);
+        cont.gridx = 1;
+        panel.add(selectbelt, cont);
+        cont.gridx = 0;
+        cont.gridy = 8;
 
-        panel.add(event, cont1);
-        cont1.gridx = 1;
-        panel.add(eventchecker1, cont1);
-        cont1.gridx = 0;
-        cont1.gridy = 9;
+        panel.add(event, cont);
+        cont.gridx = 1;
+        panel.add(eventchecker1, cont);
+        cont.gridx = 0;
+        cont.gridy = 9;
 
-        cont1.gridx = 1;
-        panel.add(eventchecker2, cont1);
-        cont1.gridx = 0;
-        cont1.gridy = 10;
+        cont.gridx = 1;
+        panel.add(eventchecker2, cont);
+        cont.gridx = 0;
+        cont.gridy = 10;
 
         JButton btn1 = new JButton("Submit");
         btn1.addActionListener(this);
@@ -178,15 +170,15 @@ public class RegisterFormPage extends JFrame implements ActionListener {
         grp.add(btn3);
         btn3.setActionCommand("Hme");
 
-
-        panel.add(btn1, cont2);
-        cont2.gridx = 0;
+        cont.insets = new Insets(20, 20, 20, 20);
+        panel.add(btn1, cont);
+        cont.gridx = 0;
         //cont.gridy = 11;
-        panel.add(btn2, cont2);
-        cont2.gridx = 1;
+        panel.add(btn2, cont);
+        cont.gridx = 2;
         //cont.gridy = 11;
-        panel.add(btn3, cont2);
-        cont2.gridx = 0;
+        panel.add(btn3, cont);
+        cont.gridx = 2;
         //cont.gridy = 11;
 
         mainPanel.add(headingPanel);

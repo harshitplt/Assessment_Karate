@@ -63,8 +63,8 @@ public class RegisterFormPage extends JFrame implements ActionListener {
         cont2.insets = new InsetsUIResource(6, 6, 6, 6);
         cont2.anchor = GridBagConstraints.SOUTH;
 
-        cont2.gridx = 15;
-        cont2.gridy = 15;
+        cont2.gridx = 11;
+        cont2.gridy = 11;
 
         cont1.gridx = 0;
         cont1.gridy = 0;

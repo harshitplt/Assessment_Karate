@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - DatePickerForm",
+            "request": "launch",
+            "mainClass": "part2.DatePickerForm",
+            "projectName": "Assessment_Karate_d4df1760"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - DatePickerSample",
+            "request": "launch",
+            "mainClass": "part2.DatePickerSample",
+            "projectName": "Assessment_Karate_d4df1760"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - JDatepcker",
             "request": "launch",
             "mainClass": "part2.JDatepcker",
