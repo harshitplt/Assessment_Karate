@@ -9,6 +9,7 @@ import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -18,12 +19,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JScrollBar;
-
 import javax.swing.JTextField;
 import javax.swing.plaf.InsetsUIResource;
-
-import java.time.*;
-import java.util.Calendar;
 
 import javax.swing.ButtonGroup;
 
@@ -41,8 +38,7 @@ public class RegisterFormPage extends JFrame implements ActionListener {
 
         JFrame karate = new JFrame("Registeration Form");
         ButtonGroup grp = new ButtonGroup();
-        
-        //GUI for RegistrationFormPage
+
         public RegisterFormPage(){
 
         JPanel mainPanel = new JPanel();
@@ -78,13 +74,8 @@ public class RegisterFormPage extends JFrame implements ActionListener {
         JLabel event = new JLabel("*Event:");
 
         JTextField nmfield = new JTextField(32);
-
         JRadioButton rbutton1 = new JRadioButton("Boy");
-        rbutton1.setActionCommand("Boy");
-        grp.add(rbutton1);
         JRadioButton rbutton2 = new JRadioButton("Girl");
-        rbutton2.setActionCommand("girl");
-        grp.add(rbutton2);
 
         JFormattedTextField textField = new JFormattedTextField(DateFormat.getDateInstance(DateFormat.SHORT));
         textField.setValue(new Date());
@@ -204,25 +195,16 @@ public class RegisterFormPage extends JFrame implements ActionListener {
         karate.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     }
-    
 
     @Override
     public void actionPerformed(ActionEvent e) {
         // TODO Auto-generated method stub
 
-        String btnVal = grp.getSelection().getActionCommand().toString();      
-
+        String btnVal = grp.getSelection().getActionCommand().toString();
 
         if (btnVal.equalsIgnoreCase("Sub"))
         {
-            if (btnVal.equalsIgnoreCase("boy") != btnVal.equalsIgnoreCase("girl")){
-                StudentsList sl = new StudentsList();
-            }
-            
-            else if (btnVal.equalsIgnoreCase("girl") != btnVal.equalsIgnoreCase("boy"))
-            {
-                StudentsList sl = new StudentsList();
-            }
+            StudentsList sl = new StudentsList();
         }
 
         else if (btnVal.equalsIgnoreCase("Rst"))

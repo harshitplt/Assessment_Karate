@@ -111,6 +111,9 @@ public void actionPerformed(ActionEvent e) {
 public static void main(String[] args) {
     Karate karate = new Karate();
     karate.setVisible(true);
-    karate.toFront();
+
+    RegisterFormPage res = new RegisterFormPage();
+    res.setVisible(true);
+
 }
 }

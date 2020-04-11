@@ -22,6 +22,7 @@ import javax.swing.JScrollBar;
 import javax.swing.JTextField;
 import javax.swing.plaf.InsetsUIResource;
 
+
 import java.time.*;
 import java.util.Calendar;
 
@@ -30,6 +31,7 @@ import javax.swing.ButtonGroup;
 import javax.swing.JFormattedTextField;
 import java.text.DateFormat;
 import java.util.Date;
+
 
 import part1.Karate;
 import part3.StudentsList;
@@ -41,8 +43,7 @@ public class RegisterFormPage extends JFrame implements ActionListener {
 
         JFrame karate = new JFrame("Registeration Form");
         ButtonGroup grp = new ButtonGroup();
-        
-        //GUI for RegistrationFormPage
+
         public RegisterFormPage(){
 
         JPanel mainPanel = new JPanel();
@@ -204,7 +205,6 @@ public class RegisterFormPage extends JFrame implements ActionListener {
         karate.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     }
-    
 
     @Override
     public void actionPerformed(ActionEvent e) {

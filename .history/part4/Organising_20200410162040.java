@@ -31,10 +31,19 @@ public class Organising {
         headingJPanel.add(headingLabel);
 
         JPanel panel = new JPanel(new GridBagLayout());
-        GridBagConstraints cont = new GridBagConstraints();
+        GridBagConstraints cont1 = new GridBagConstraints();
+        GridBagConstraints cont2 = new GridBagConstraints();
 
-        cont.insets = new Insets(10, 10, 10, 10);
-        cont.anchor = GridBagConstraints.WEST;
+        cont1.insets = new Insets(10, 10, 10, 10);
+        cont1.anchor = GridBagConstraints.WEST;
+
+        cont2.insets = new Insets(15, 15, 15, 15);
+        cont2.anchor = GridBagConstraints.SOUTH;
+
+        cont2.gridx = 2;
+        cont2.gridy = 2;
+        cont2.gridheight = 4;
+        cont2.gridwidth = 4;
 
         JLabel bowls = new JLabel("Enter Number of Bowls:");
         JTextField enterbowl = new JTextField(16);
@@ -42,17 +51,17 @@ public class Organising {
         JButton nxtbtn = new JButton();
         JButton hmebtn = new JButton();
 
-        panel.add(bowls, cont);
-        cont.gridx = 1;
-        panel.add(enterbowl, cont);
-        cont.gridy = 0;
-        cont.gridx = 1;
+        panel.add(bowls, cont1);
+        cont1.gridx = 1;
+        panel.add(enterbowl, cont1);
+        cont1.gridy = 0;
+        cont1.gridx = 1;
 
-        panel.add(nxtbtn, cont);
-        cont.gridy = 1;
+        panel.add(nxtbtn, cont2);
+        cont2.gridy = 0;
         //cont.gridx = 1;
-        panel.add(hmebtn, cont);
-        cont.gridy = 1;
+        panel.add(hmebtn, cont2);
+        cont2.gridy = 1;
         //cont.gridx = 2;
 
         mainPanel.add(headingJPanel);
@@ -64,7 +73,6 @@ public class Organising {
         Karate.setVisible(true);
         Karate.setLocationRelativeTo(null);
         Karate.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
     }
 
 

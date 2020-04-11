@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - WhatIsJdbc",
+            "request": "launch",
+            "mainClass": "part2.WhatIsJdbc",
+            "projectName": "Assessment_Karate_d4df1760"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - DatePickerForm",
             "request": "launch",
             "mainClass": "part2.DatePickerForm",
