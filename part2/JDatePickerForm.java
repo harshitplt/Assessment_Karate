@@ -6,7 +6,7 @@ import javafx.application.Application;
 import javafx.geometry.HPos;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-//import javafx.scene.control.DatePicker;
+import javafx.scene.control.DatePicker;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -16,7 +16,7 @@ public class JDatePickerForm extends Application {
     private Stage stage;
     
     public static void main(String[] args) {
-        Locale.setDefault(Locale.US);
+        Locale.setDefault(Locale.UK);
         launch(args);
     }
  
@@ -33,7 +33,7 @@ public class JDatePickerForm extends Application {
         Scene scene = new Scene(vbox, 400, 400);
         stage.setScene(scene);
 
-        //checkInDatePicker = new DatePicker();
+        checkInDatePicker = new DatePicker();
 
         GridPane gridPane = new GridPane();
         gridPane.setHgap(10);
@@ -43,7 +43,7 @@ public class JDatePickerForm extends Application {
         gridPane.add(checkInlabel, 0, 0);
 
         GridPane.setHalignment(checkInlabel, HPos.LEFT);
-        //gridPane.add(checkInDatePicker, 0, 1);
+        gridPane.add(checkInDatePicker, 0, 1);
         vbox.getChildren().add(gridPane);
     }
 }

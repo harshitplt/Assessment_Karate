@@ -1,0 +1,9 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Program Files (x86)\\Oracle\\JavaFX 2.2 Runtime\\lib\\jfxrt.jar",
+        "c:\\Program Files (x86)\\Oracle\\JavaFX 2.2 Runtime\\lib\\deploy.jar",
+        "c:\\Program Files (x86)\\Oracle\\JavaFX 2.2 Runtime\\lib\\javaws.jar",
+        "c:\\Program Files (x86)\\Oracle\\JavaFX 2.2 Runtime\\lib\\plugin.jar"
+    ]
+}
